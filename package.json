@@ -1,0 +1,15 @@
+{
+  "name": "book_notes",
+  "version": "2.0.0",
+  "description": "Place for user to take and save notes on books",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Seth Chute",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  }
+}
