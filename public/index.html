@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="bookNotesApp" lang="en">
   <head>
+
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <script src="services/angular/angular.min.js"></script>
     
     <link rel="stylesheet" href="assets/styles/css/main.css" type="text/css">
 
@@ -13,8 +12,14 @@
   </head>
 
   <body>
-
-    
-
+		
+		<div ng-include="'/views/partials/header.html'"></div>
+		
+		<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="assets/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="assets/bower_components/angular/angular.min.js"></script>
+    <script src="assets/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  	<script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
   </body>
 </html>

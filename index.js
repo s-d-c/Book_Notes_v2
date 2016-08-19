@@ -2,6 +2,17 @@ var express = require('express');
 
 var app = express();
 
+//test database connection
+var models = require('./server/models/');
+models.sequelize
+  .authenticate()
+  .then(function() {
+    console.log('Connection successful');
+  })
+  .catch(function(error) {
+    console.log('Error creating connection:', error);
+  });
+
 app.set('port', process.env.PORT || 3000);
 
 app.use(express.static(__dirname + '/public'));

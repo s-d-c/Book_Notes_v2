@@ -1,0 +1,24 @@
+{
+  "name": "book_notes",
+  "description": "Place for user to take and save notes on books",
+  "main": "index.js",
+  "authors": [
+    "Seth Chute"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.3.1",
+    "angular": "1.5.8",
+    "bootstrap-sass": "^3.3.7"
+  }
+}
