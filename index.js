@@ -1,5 +1,5 @@
 var express = require('express');
-
+var bodyParser = require('body-parser');
 var app = express();
 
 //test database connection
@@ -15,7 +15,11 @@ models.sequelize
 
 app.set('port', process.env.PORT || 3000);
 
+app.use(bodyParser.urlencoded({extended: false}));
+
 app.use(express.static(__dirname + '/public'));
+
+app.use('/users', require('./server/controllers/user.js'));
 
 app.get('/', function(req, res) {
 	res.render('home');
