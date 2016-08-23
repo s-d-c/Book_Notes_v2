@@ -2,6 +2,8 @@
 <html ng-app="bookNotesApp" lang="en">
   <head>
 
+    <base href="/">
+
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,9 +15,11 @@
 
   <body>
 		
-		<div ng-include="'/views/partials/header.html'"></div>
+		<div ng-include="'/app/shared/header/header.html'"></div>
+
+    <div ui-view></div>
 		
-		<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="assets/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
     <script src="assets/bower_components/angular/angular.min.js"></script>
     <script src="assets/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>

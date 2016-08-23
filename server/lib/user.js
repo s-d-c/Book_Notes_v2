@@ -3,7 +3,9 @@ var user = require('../models').user;
 module.exports = {
   //get a list of all users using model.findAll()
   index(req, res) {
-    user.findAll()
+    user.findAll({
+      include: notebook
+    })
       .then(function(users) {
         res.status(200).json(users)
       })
@@ -14,7 +16,9 @@ module.exports = {
 
   //get a user by the unique id using model.findById()
   show(req, res) {
-    user.findById(req.params.id)
+    user.findById(req.params.id, {
+      include: notebook
+    })
       .then(function(user) {
         res.status(200).json(user);
       })
